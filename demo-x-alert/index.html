@@ -68,12 +68,17 @@
 	}
 
 	/* content text of alert */
-	.text{
+	.text {
 	  padding: 10px 10px 0px 10px;
 	  -webkit-box-sizing: border-box;
 	  -moz-box-sizing: border-box;
 	  -ms-box-sizing: border-box;
 	  box-sizing: border-box;
+	}
+
+	/* Padding for <p> */
+	p {
+	  padding: 10px;
 	}
     </style>
 </head>
@@ -89,10 +94,10 @@
             <option value='success'>Success</option>
         </select>
 
-        <br>
+        <br><br>
 
         <label for="input">Your text</label>
-        <input name="input" type="text" oninput="Your text here, tranks @zenorocha,@braziljs">
+        <input name="input" type="text" value="Your text here, tranks @zenorocha,@braziljs" oninput="document.querySelector('x-alert').text = this.value">
     </p>
 
     <!-- Using Custom Elements -->
