@@ -80,13 +80,19 @@
 <body>
 
     <p>
-        <select onchange="document.querySelector('x-alert').type = this.value">>
+    	<label for="select">Select type</label>
+        <select name="select" onchange="document.querySelector('x-alert').type = this.value">>
             <option disabled>Select one type</option>
             <option value='info'>Info</option>
             <option value='notify'>Notify</option>
             <option value='warning'>Warning</option>
             <option value='success'>Success</option>
         </select>
+
+        <br>
+
+        <label for="input">Your text</label>
+        <input name="input" type="text" oninput="Your text here, tranks @zenorocha,@braziljs">
     </p>
 
     <!-- Using Custom Elements -->
