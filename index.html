@@ -79,6 +79,16 @@
 </head>
 <body>
 
+    <p>
+        <select onchange="document.querySelector('x-alert').name = this.value">>
+            <option>Select one type</option>
+            <option value='info'>Info</option>
+            <option value='notify'>Notify</option>
+            <option value='warning'>Warning</option>
+            <option value='success'>Success</option>
+        </select>
+    </p>
+
     <!-- Using Custom Elements -->
     <x-alert text="Your text here, tranks @zenorocha,@braziljs" type="info"></x-alert>
 
