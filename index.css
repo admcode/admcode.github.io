@@ -60,7 +60,7 @@ p
   overflow: hidden;
 
   width: 100%;
-  height: 185px;
+  min-height: 185px;
 }
 .row:last-child
 {
@@ -74,29 +74,10 @@ p
 {
   top: -20px;
 }
-.row.error
-{
-  height: 160px;
-}
 .row.image
 {
   height: 400px;
 }
-.row .paragraph
-{
-  position: absolute;
-  left: 0;
-
-  width: 100%;
-
-  text-align: center;
-}
-.row .logo
-{
-  width: 120px;
-  height: 40px;
-}
-
 .header
 {
   position: absolute;
@@ -133,7 +114,7 @@ p
 
 .image
 {
-  background: url('https://images.unsplash.com/photo-1433829351926-e6df5b7eeb1a?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ba9ce899273ed81c3682c98210746d27') no-repeat;
+  background: url('top.jpg') no-repeat;
   background-size: 100%;
 }
 
@@ -181,7 +162,7 @@ a:hover, a:focus
 {
   position: relative;
 
-  height: 200px;
+  max-height: 200px;
 }
 .project .container-inner
 {
