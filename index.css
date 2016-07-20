@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,100);
 
-/* Styling demo page */
+/***
+Geral style */
 h1,
 h3,
 p
@@ -24,6 +25,19 @@ p
   color: #bbb;
 }
 
+a
+{
+  text-decoration: none;
+
+  color: #f05c38;
+}
+a:hover, a:focus
+{
+  border-bottom: 2px solid #f05c38;
+}
+
+/***
+Grid style with flex-box */
 .row,
 .col
 {
@@ -38,21 +52,6 @@ p
   -webkit-align-items: center;
   -webkit-justify-content: center;
 }
-.row.row-horizontal,
-.col.row-horizontal
-{
-  flex-direction: row;
-
-  -webkit-flex-direction: row;
-}
-.row.row-vertical,
-.col.row-vertical
-{
-  flex-direction: column;
-
-  -webkit-flex-direction: column;
-}
-
 .row
 {
   position: relative;
@@ -66,18 +65,39 @@ p
 {
   border-top: 1px dotted lightgrey;
 }
-.row.logos
-{
-  height: 100px;
-}
-.row.logos p
-{
-  top: -20px;
-}
 .row.image
 {
   height: 400px;
 }
+.col
+{
+  width: 33%;
+}
+@media only screen and (max-device-width: 768px)
+{
+  .row
+  {
+    flex-wrap: wrap;
+  }
+  .col
+  {
+    width: 50%;
+  }
+}
+@media only screen and (max-device-width: 480px)
+{
+  .col
+  {
+    width: 80%;
+  }
+  .description
+  {
+    font-size: 14.85px;
+  }
+}
+
+/***
+Header style [title, subtitle, links and image] */
 .header
 {
   position: absolute;
@@ -118,19 +138,16 @@ p
   background-size: 100%;
 }
 
-.col
-{
-  width: 33%;
-}
-
-#footer
+/***
+Footer style [License, author, and links to Twitter/GitHub] */
+.footer
 {
   margin-top: 50px;
   margin-bottom: 15px;
 
   text-align: center;
 }
-#footer p
+.footer p
 {
   font-size: 12px;
 
@@ -138,31 +155,13 @@ p
   margin: 0;
 }
 
-a
-{
-  text-decoration: none;
-
-  color: #f05c38;
-}
-a:hover, a:focus
-{
-  border-bottom: 2px solid #f05c38;
-}
-
-.row-border
-{
-  border-bottom: 1px solid silver;
-}
-.col-border
-{
-  border-right: 1px solid silver;
-  border-left: 1px solid silver;
-}
+/***
+Main style [Projects List] */
 .project
 {
   position: relative;
 
-  max-height: 200px;
+  max-height: 280px;
 }
 .project .container-inner
 {
@@ -170,6 +169,7 @@ a:hover, a:focus
   margin: 6px;
 
   background: #fff;
+  min-height: 200px;
 }
 .project .container-inner h2
 {
