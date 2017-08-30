@@ -2,22 +2,21 @@
 General
 --------------------------*/
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font: normal 16px sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font: normal 16px 'Roboto', sans-serif;
 
   color: #555;
 }
 body {
   line-height: 1;
 }
-ul,
-nav {
+ul, nav {
   list-style: none;
 }
 
@@ -25,7 +24,7 @@ a {
   cursor: pointer;
   text-decoration: none;
 
-  opacity: .9;
+  opacity: .6;
   color: inherit;
 }
 
@@ -38,7 +37,10 @@ a:focus {
 Header
 --------------------------*/
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
 
   height: auto;
   min-height: 120px;
@@ -46,8 +48,12 @@ Header
 
   color: #4a86e8;
 
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
 }
 .header p {
   font-size: 1.5em;
@@ -62,6 +68,8 @@ Header
   color: #24292e;
 }
 .header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -77,27 +85,12 @@ Header
   margin-right: 0;
 }
 
-@media (max-width: 1000px) {
-  .header {
-    padding: 20px 50px;
-  }
-}
-
-@media (max-width: 700px) {
-  .header {
-    flex-direction: column;
-  }
-
-  .header .header-title {
-    margin-bottom: 15px;
-  }
-}
-
-
 /*--------------------------
 Section and Articles
 --------------------------*/
 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
 
@@ -107,14 +100,18 @@ section {
 
   color: #fff;
   background-color: #192539;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
 }
 
-section .projects {
+
+section.projects {
   color: #192539;
   background-color: #fff;
 }
 section .article {
-  width: 100%;
   margin-bottom: 2em;
   padding: 2em;
 
@@ -130,13 +127,15 @@ section .subtitle {
   padding-bottom: 2rem;
 }
 
-section .article .article-text {
-  font-size: 1rem;
-
+.article-text,
+.article-link {
   margin: .6rem 0;
 }
-section .article .article-text span,
-section .article .article-text .article-link {
+
+.article-text {
+  font-size: 1rem;
+}
+.article-link {
   font-size: .9em;
 }
 
@@ -144,6 +143,8 @@ section .article .article-text .article-link {
 Footer
 --------------------------*/
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   padding: 2.5em 5% 2.5em;
@@ -151,17 +152,27 @@ Footer
   color: #fff;
   background-color: #24292e;
 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   width: 40%;
 
   text-align: center;
 
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -186,7 +197,4 @@ Footer
   display: block;
 
   height: 32px;
-}
-.social-icon {
-  width: 32px;
 }
