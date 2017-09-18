@@ -59,6 +59,12 @@ Header
   font-size: 1.5em;
   font-weight: 400;
 }
+.header p:after {
+  content: " ·";
+}
+.header p:before {
+  content: "· ";
+}
 .header .header-title {
   font-size: 2em;
   font-weight: 700;
@@ -125,6 +131,9 @@ section .subtitle {
 
   margin: .2rem 0;
   padding-bottom: 2rem;
+}
+section .subtitle:before {
+  content: "+ ";
 }
 
 .article-text,
